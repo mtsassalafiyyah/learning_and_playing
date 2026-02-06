@@ -10,60 +10,65 @@ body {
   color: #fff;
 }
 
+/* Container otomatis */
 .container {
-  max-width: 1200px; /* Lebih lebar karena link banyak */
+  max-width: 1400px;
   margin: auto;
-  padding: 20px;
+  padding: clamp(12px, 2vw, 24px);
 }
 
 header {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: clamp(16px, 3vw, 28px);
 }
 
+/* Judul otomatis */
 header h1 {
-  font-size: 2.4rem;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: #ffd700;
   font-weight: 600;
 }
 
 .tagline {
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   margin-top: 5px;
   font-style: italic;
   opacity: 0.9;
 }
 
-/* Grid Lebih Rapat & Fleksibel */
+/* Grid otomatis fleksibel */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(220px, 45vw, 300px), 1fr)
+  );
+  gap: clamp(10px, 2vw, 18px);
 }
 
-/* Card Upgrade */
+/* Card otomatis */
 .card {
   background: rgba(255, 255, 255, 0.12);
-  padding: 16px 14px;
-  border-radius: 14px;
+  padding: clamp(16px, 3vw, 24px);
+  border-radius: clamp(14px, 3vw, 20px);
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.35;
   transition: all 0.25s ease;
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Hover Efek Lebih Halus */
+/* Hover Efek */
 .card:hover {
   background: linear-gradient(135deg, #ffd700, #ffb703);
   color: #1b2a32;
@@ -71,30 +76,18 @@ header h1 {
   box-shadow: 0 10px 22px rgba(0,0,0,0.35);
 }
 
-/* Fokus (aksesibilitas keyboard) */
+/* Fokus */
 .card:focus {
   outline: 3px solid #ffd700;
   outline-offset: 3px;
 }
 
-/* Footer */
+/* Footer otomatis */
 footer {
   text-align: center;
-  margin-top: 35px;
-  font-size: 0.85rem;
+  margin-top: clamp(24px, 4vw, 40px);
+  font-size: clamp(0.85rem, 2vw, 1rem);
   color: #ccc;
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 15px;
-}
-
-/* Responsive HP */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.9rem;
-  }
-
-  .card {
-    font-size: 0.9rem;
-    padding: 14px 12px;
-  }
+  padding-top: clamp(12px, 2vw, 18px);
 }
